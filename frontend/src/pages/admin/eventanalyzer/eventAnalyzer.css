@@ -1,0 +1,200 @@
+/* EventAnalyzer.css */
+
+:root {
+  --light-bg: #f9f9f9;
+  --light-card-bg: #ffffff;
+  --light-text: #333333;
+  --light-primary: #3f51b5;
+  --light-secondary: #7e57c2;
+  --light-border: #e0e0e0;
+  --light-shadow: rgba(0, 0, 0, 0.1);
+  
+  --dark-bg: #121212;
+  --dark-card-bg: #1e1e1e;
+  --dark-text: #f5f5f5;
+  --dark-primary: #5c6bc0;
+  --dark-secondary: #9575cd;
+  --dark-border: #424242;
+  --dark-shadow: rgba(0, 0, 0, 0.3);
+}
+
+.event-analyzer-container {
+  padding: 20px;
+  margin-left: 304px; /* 240px (sidebar) + 64px (navbar) */
+  min-height: 100vh;
+  background-color: var(--light-bg);
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.event-analyzer-heading {
+  margin-bottom: 20px;
+  font-weight: bold;
+  position: absolute;
+  color: var(--light-primary);
+  transition: color 0.3s ease;
+}
+
+.event-analyzer-content {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.event-analyzer-chart {
+  flex: 1;
+  min-width: 400px;
+  background-color: var(--light-card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--light-shadow);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-analyzer-table {
+  flex: 1;
+  min-width: 400px;
+}
+
+/* Dark Mode Styles */
+.dark-mode .event-analyzer-container {
+  background-color: var(--dark-bg);
+}
+
+.dark-mode .event-analyzer-heading {
+  color: var(--dark-primary);
+}
+
+.dark-mode .event-analyzer-chart {
+  background-color: var(--dark-card-bg);
+  box-shadow: 0 4px 12px var(--dark-shadow);
+}
+
+.dark-mode .MuiPaper-root {
+  background-color: var(--dark-card-bg);
+}
+
+.dark-mode .MuiTableCell-root {
+  color: var(--dark-text);
+  border-bottom-color: var(--dark-border);
+}
+
+.dark-mode .MuiTableHead-root .MuiTableRow-root {
+  background-color: var(--dark-primary);
+}
+
+.dark-mode .MuiTypography-root {
+  color: var(--dark-text);
+}
+
+.dark-mode .recharts-text {
+  fill: var(--dark-text);
+}
+
+.dark-mode .recharts-cartesian-grid-horizontal line,
+.dark-mode .recharts-cartesian-grid-vertical line {
+  stroke: var(--dark-border);
+}
+
+.dark-mode .recharts-tooltip-wrapper .recharts-default-tooltip {
+  background-color: var(--dark-card-bg) !important;
+  border-color: var(--dark-secondary) !important;
+  color: var(--dark-text) !important;
+}
+
+/* ===== Responsive Enhancements for EventAnalyzer ===== */
+
+/* Ensure the container is responsive, allowing for horizontal scrolling */
+@media (max-width: 1024px) {
+  .event-analyzer-container {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .event-analyzer-heading {
+    position: static;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .event-analyzer-content {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .event-analyzer-chart {
+    width: 100%;
+    min-width: unset;
+    padding: 16px;
+    overflow-x: auto;  /* Enable horizontal scrolling */
+  }
+
+  .event-analyzer-table {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .event-analyzer-chart > div {
+    height: 300px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .event-analyzer-container {
+    padding: 12px;
+  }
+
+  .event-analyzer-chart {
+    padding: 16px;
+  }
+
+  .MuiTableCell-root {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .MuiTypography-root {
+    font-size: 18px !important;
+  }
+
+  .event-analyzer-chart > div {
+    height: 250px !important;
+  }
+}
+
+/* Touch optimization and polish */
+button, .MuiButtonBase-root {
+  min-height: 44px;
+  font-size: 16px;
+}
+
+.recharts-wrapper {
+  overflow-x: auto;
+}
+
+.recharts-tooltip-wrapper {
+  pointer-events: none;
+}
+
+@media (max-width: 800px) {
+  .recharts-wrapper {
+    width: 100% !important;
+  }
+
+  .recharts-bar-rectangle {
+    rx: 5;
+    ry: 5;
+  }
+}
+
+/* Enabling horizontal scrolling on chart container */
+.event-analyzer-chart {
+  overflow-x: auto;  /* Allow horizontal scroll */
+  white-space: nowrap; /* Prevent breaking of content */
+}
+
+.recharts-wrapper {
+  width: 100%;
+}

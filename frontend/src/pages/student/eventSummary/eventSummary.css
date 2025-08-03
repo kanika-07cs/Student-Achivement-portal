@@ -1,0 +1,267 @@
+/* EventSummary.css */
+
+/* ========== Base Layout ========== */
+.eventsummarypage {
+  height: calc(100vh - 64px);
+  width: calc(100vw - 220px);
+  margin-left: 300px;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  overflow-y: auto;
+  position: relative;
+  top: 64px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* ========== Search and Add Button Area ========== */
+.search-add-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1290px;
+  width: 100%;
+}
+
+.searchNadd {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex-grow: 1;
+  min-width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.add-btn {
+  padding: 12px 24px;
+  background-color: #8013bd;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #6e0fa5;
+}
+
+/* ========== Upload Message ========== */
+.upload-message-box {
+  float: right;
+  padding: 10px 14px;
+  background-color: #f5ecfe;
+  border-left: 4px solid #8013bd;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.upload-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ========== Event Grid ========== */
+.outerbox {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.mainbox {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* ========== Event Card ========== */
+.event-card {
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.event-card:hover {
+  transform: scale(1.02);
+  background-color: #f5ecfe;
+}
+
+/* ========== Modal ========== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  transition: background-color 0.3s, color 0.3s;
+  scroll-behavior: smooth;
+}
+
+.modal-box input,
+.modal-box textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 15px;
+  
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.modal-box textarea {
+  resize: vertical;
+  height: 50px;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.modal-buttons button {
+  flex: 1 1 auto;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-buttons button[type="submit"] {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.modal-buttons button[type="button"] {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* ========== Dark Mode ========== */
+.dark-mode .eventsummarypage {
+  background-color: #303030;
+  color: #fff;
+}
+
+.dark-mode .modal-box {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+.dark-mode .modal-box input,
+.dark-mode .modal-box textarea {
+  background-color: #2e2e2e;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.dark-mode .modal-buttons button {
+  background-color: #555;
+  color: #fff;
+}
+
+.dark-mode .event-card {
+  background-color: #2f2f2f;
+  color: white;
+  border: 1px solid #666;
+}
+
+.dark-mode .event-card:hover {
+  background-color: #444;
+}
+
+/* ========== Responsive Enhancements ========== */
+@media (max-width: 1024px) {
+  .eventsummarypage {
+    width: 100vw;
+    margin-left: 0;
+    top: 56px;
+    padding: 16px;
+  }
+
+  .searchNadd {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .add-btn {
+    width: 100%;
+  }
+
+  .modal-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .event-card {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .search-bar {
+    margin-bottom: 10px;
+  }
+
+  .modal-box textarea {
+    height: 120px;
+  }
+
+  .modal-box img {
+    max-height: 200px;
+  }
+
+  .mainbox {
+    padding: 0 10px;
+  }
+}
+
+/* ========== Accessibility and Usability ========== */
+button,
+.MuiButtonBase-root {
+  min-height: 44px;
+  font-size: 16px;
+}
+
+textarea {
+  font-size: 15px;
+  padding: 12px;
+}

@@ -1,0 +1,87 @@
+/* Container for the Summary Approvals page content */
+.summaryapprovalspage {
+  position: fixed;
+  top: 64px;
+  left: 250px;
+  right: 0;
+  bottom: 0;
+  padding: 2rem;
+  overflow-y: auto;
+  box-sizing: border-box;
+  background-color: #f4f7f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 1;
+}
+
+/* Dark mode support */
+body.dark-mode .summaryapprovalspage {
+  background-color: #303030;
+  color: #e4e6eb;
+}
+
+/* Table container */
+.summaryapprovalspage .MuiTableContainer-root {
+  max-height: calc(100% - 120px);
+  overflow-y: auto;
+}
+
+/* Table header styling */
+.summaryapprovalspage .MuiTableHead-root {
+  background-color: #0EA5E9;
+}
+
+.summaryapprovalspage .MuiTableCell-head {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Buttons in table */
+.summaryapprovalspage .MuiButton-outlined {
+  min-width: 80px;
+}
+
+/* Modal image styling */
+.summaryapprovalspage img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .summaryapprovalspage {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    padding: 1rem;
+  }
+
+  .summaryapprovalspage .MuiTableContainer-root {
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    max-width: 100%;
+    display: block;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .summaryapprovalspage table {
+    min-width: 600px;
+    width: 100%;
+    table-layout: auto;
+  }
+
+  .summaryapprovalspage .MuiTableCell-head,
+  .summaryapprovalspage .MuiTableCell-body {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+
+  .summaryapprovalspage .MuiButton-outlined {
+    min-width: 70px;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+}

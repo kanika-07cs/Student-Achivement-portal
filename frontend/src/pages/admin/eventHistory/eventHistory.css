@@ -1,0 +1,113 @@
+/* EventHistory.css */
+
+/* General Layout Adjustments */
+.event-history-container {
+  padding: 32px;
+  margin-left: 250px; /* Sidebar width */
+  padding-top: 80px;  /* Keep space below navbar */
+  min-height: calc(100vh - 64px); /* Adjust for navbar height */
+  box-sizing: border-box;
+}
+
+/* Title */
+.event-history-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+  color: #2c3e50;
+}
+
+/* Controls Section */
+.event-history-controls {
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping of controls */
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* Table Styling */
+.MuiTableRow-root:nth-of-type(odd) {
+  background-color: #f5f5f5;
+}
+
+.MuiTableRow-root:nth-of-type(even) {
+  background-color: #ffffff;
+}
+
+.MuiTableCell-head {
+  background-color: #0EA5E9 !important;
+  font-weight: bold;
+}
+
+.MuiTableHead-root .MuiTableCell-head {
+  background-color: #7209b7 !important;
+  color: #fff !important;
+}
+
+/* Modal Styling */
+.event-modal,
+.filter-modal {
+  position: fixed; /* use fixed for viewport centering */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%; /* adjust width */
+  max-width: 600px; /* max width */
+  background-color: #fff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  border-radius: 12px;
+  max-height: 80vh; /* adjust height */
+  overflow-y: auto;
+}
+
+/* Image in Modal */
+.event-modal img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+/* Filter Section */
+.filter-modal .MuiFormControl-root {
+  margin-bottom: 16px;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Dark Mode Support */
+body.dark-mode .event-history-title {
+  color: #ecf0f1;
+}
+
+body.dark-mode .event-modal,
+body.dark-mode .filter-modal {
+  background-color: #2c3e50;
+  color: white;
+}
+
+body.dark-mode .MuiTableRow-root {
+  background-color: #3b3b3b !important;
+  color: white;
+}
+
+body.dark-mode .MuiTableHead-root {
+  background-color: #000000 !important;
+}
+
+body.dark-mode .MuiTableCell-head {
+  color: #ffffff !important;
+}
+
+body.dark-mode .MuiTableCell-root {
+  color: white;
+}
+
+
+

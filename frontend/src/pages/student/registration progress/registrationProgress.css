@@ -1,0 +1,114 @@
+
+.registration-container {
+  height: 94vh; /* full vertical height */
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 64px;
+  left: 250px;
+  right: 0;
+  bottom: 0;
+}
+
+.all-events-box {
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 12px;
+  width: 91%;
+  
+}
+
+.all-events-box h6 {
+  font-weight: 600;
+  color: #333;
+}
+
+.grid-two-columns {
+  display: grid;
+  grid-template-columns: repeat(2,600px);
+  gap: 16px;
+  margin-top: 10px;
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.grid-two-columns::-webkit-scrollbar {
+  width: 6px;
+}
+.grid-two-columns::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+
+.all-events-box .MuiCard-root {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.all-events-box .MuiCard-root:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.MuiCardContent-root {
+  padding: 12px 16px;
+}
+
+.MuiCardContent-root .MuiTypography-subtitle1 {
+  font-weight: 600;
+  color: #444;
+}
+
+.MuiCardContent-root .MuiTypography-body2 {
+  color: #666;
+  margin-top: 4px;
+}
+
+.MuiCardContent-root .MuiTypography-caption {
+  color: #888;
+  margin-top: 2px;
+}
+
+.MuiChip-root {
+  margin-top: 10px;
+}
+
+.MuiDialogTitle-root {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.MuiDialogContent-root {
+  background-color: #fafafa;
+}
+
+.MuiDialogContent-root .MuiTypography-h6 {
+  color: #333;
+  font-weight: 600;
+}
+
+.MuiDialogContent-root .MuiTypography-subtitle2 {
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.MuiDialogContent-root .MuiTypography {
+  color: #333;
+}
+
+.MuiDialogActions-root {
+  padding: 16px 24px;
+}
+
+
+
+

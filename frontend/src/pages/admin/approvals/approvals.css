@@ -1,0 +1,141 @@
+/* Container for the Approvals page content */
+.approvalspage {
+  position: fixed;
+  top: 64px;
+  left: 250px;
+  right: 0;
+  bottom: 0;
+  padding: 2rem;
+  overflow-y: auto;
+  box-sizing: border-box;
+  background-color: #f4f7f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 1;
+}
+
+/* Add horizontal scroll on small screens */
+.approvalspage .table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Keep table width large for horizontal scrolling */
+.approvalspage table {
+  min-width: 600px;
+}
+
+.responsive-table {
+  min-width: 700px; /* You can increase this to force scroll */
+  width: 100%;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.viewButton {
+  border-color: #8013bd;
+  border-style: solid;
+  color: #8013bd;
+  background-color: #f5ecfe;
+}
+
+.eventbtn {
+  float: right;
+  padding: 12px;
+  background-color: #8013bd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-weight: 500;
+  height: 50px;
+}
+
+.eventbtn:hover {
+  background-color: #8013bd;
+}
+
+/* Dark mode support */
+body.dark-mode .approvalspage {
+  background-color: #303030;
+  color: #e4e6eb;
+}
+
+/* Table container height adjustment */
+.approvalspage .MuiTableContainer-root {
+  max-height: calc(100% - 120px);
+  overflow-y: auto;
+}
+
+/* Table header styling */
+.approvalspage .MuiTableHead-root {
+  background-color: #7209b7;
+}
+
+.approvalspage .MuiTableCell-head {
+  color: #fff;
+  font-weight: 600;
+}
+
+.MuiTableHead-root .MuiTableCell-head {
+  background-color: #7209b7 !important;
+  color: #fff !important;
+}
+
+.approvalspage .MuiButton-outlined {
+  min-width: 80px;
+}
+
+/* Dialog content typography */
+.approvalspage .MuiDialogContent-root p,
+.approvalspage .MuiDialogContent-root .MuiTypography-root {
+  margin-bottom: 0.5rem;
+}
+
+/* Snackbar styling */
+.approvalspage .MuiSnackbar-root {
+  bottom: 20px;
+}
+
+.modal-texts {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .approvalspage {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    padding: 0.7rem;
+  }
+
+  .responsive-table {
+    min-width: 800px; /* Ensure it's wider than the screen */
+  }
+
+  .MuiTableCell-root {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .approvalspage .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .approvalspage table {
+    min-width: 600px;
+  }
+
+  .modal-texts {
+    font-size: 14px;
+  }
+}

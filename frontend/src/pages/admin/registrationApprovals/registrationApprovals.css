@@ -1,0 +1,139 @@
+.registration-container {
+  height: 94vh; /* full vertical height */
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 64px;
+  left: 250px;
+  right: 0;
+  bottom: 0;
+  overflow: auto;  /* Enable scrolling */
+  background-color: #f7f7f7;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Clickable event name list */
+.registration-container > div > div {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+  user-select: none;
+}
+
+.registration-container > div > div:hover,
+.registration-container > div > div:focus {
+  background-color: #e3f2fd;
+  box-shadow: inset 3px 0 0 #1976d2;
+  outline: none;
+}
+
+.registration-container > div > div:last-child {
+  border-bottom: none;
+}
+
+/* Dialog Title adjustments */
+.MuiDialogTitle-root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 48px; /* allow space for close button */
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #0d47a1;
+  background-color: #e3f2fd;
+  border-bottom: 1px solid #90caf9;
+}
+
+/* Dialog content background and padding */
+.MuiDialogContent-root {
+  background-color: #fff;
+  padding: 24px 32px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+/* List of students inside modal */
+.MuiList-root {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0;
+  margin-bottom: 16px;
+  background-color: #fafafa;
+}
+
+.MuiListItem-root {
+  padding: 12px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.MuiListItem-root:hover,
+.MuiListItem-root.Mui-selected {
+  background-color: #bbdefb;
+}
+
+.MuiListItem-root:last-child {
+  border-bottom: none;
+}
+
+/* Student details section */
+.MuiDialogContent-root > .MuiTypography-subtitle1 {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1976d2;
+}
+
+/* Approve / Reject buttons container */
+.approval-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* TextField for rejection reason */
+.MuiTextField-root {
+  margin-top: 12px;
+}
+
+/* Rejection reason text */
+.rejection-reason-text {
+  margin-top: 12px;
+  padding: 12px;
+  background-color: #ffebee;
+  border: 1px solid #f44336;
+  border-radius: 6px;
+  color: #b71c1c;
+  white-space: pre-wrap;
+  font-size: 0.9rem;
+}
+
+/* Dialog actions */
+.MuiDialogActions-root {
+  padding: 16px 24px;
+  border-top: 1px solid #e0e0e0;
+  background-color: #fafafa;
+}
+
+/* Close icon button in dialog title */
+.MuiDialogTitle-root .MuiIconButton-root {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  color: #1976d2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .registration-container {
+    padding: 16px;
+    left: 0;
+  }
+
+  .MuiDialogContent-root {
+    padding: 16px 20px;
+    max-height: 50vh;
+  }
+}
